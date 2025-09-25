@@ -5,9 +5,11 @@
   "projects": {
     "portfolio": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
+  "schematics": {
+  "@schematics/angular:component": {
+    "standalone": true,
+    "style": "scss",
+    "skipTests": true
         }
       },
       "root": "",
