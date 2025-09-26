@@ -1,9 +1,10 @@
 .header-logo {
   font-family: 'Handjet-Regular', monospace;
-  font-size: 42px;
+  font-size: 58px;
   color: var(--color-orange);
   font-weight: bold;
-  margin: 24px 0;
+  margin: 12px 0;
+  margin-right: 16px;
 }
 
 nav {
@@ -11,6 +12,10 @@ nav {
   font-size: 20px;
   display: flex;
   gap: 42px;
+  a {
+    text-decoration: none;
+    color: var(--color-orange);
+  }
   a:hover {
     cursor: pointer;
     color: var(--color-blue);
@@ -18,10 +23,17 @@ nav {
 }
 
 .header {
+  position: fixed; /* bleibt oben kleben */
+  width: 100%;
+  max-width: 1440px;
+  height: 80px; /* gleiche Höhe wie bisher */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 64px;
+  padding: 0 40px;
+  background: transparent; /* halbtransparent, passe Farbe an */
+  backdrop-filter: blur(6px); /* leichter Blur hinter dem Header */
+  z-index: 1000; /* über allem */
 }
 
 .header-left {
@@ -34,4 +46,15 @@ nav {
 .header-right {
   color: var(--color-orange);
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p:hover {
+    cursor: pointer;
+    color: var(--color-blue);
+  }
+}
+
+.active {
+  color: var(--color-blue);
 }

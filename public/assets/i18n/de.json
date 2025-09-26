@@ -1,0 +1,22 @@
+{
+  "nav": { "whyMe": "Warum ich", "skills": "Fähigkeiten", "projects": "Projekte", "contact": "Kontakt" },
+    "hero": {"contact": "KONTAKTIERE MICH", "role": "FRONTEND ENTWICKLER", "name": "Noah Velickovic"},
+    "whyMe": {
+    "title": "Warum ich",
+    "text": "Schon als Kind haben mich Computer und Technologie fasziniert. Ich habe Freude daran, Dinge zu verstehen, Probleme zu lösen und Ideen umzusetzen, die das Leben einfacher machen. Ich denke gerne über den Tellerrand hinaus und bin überzeugt, dass es für jedes Problem mehr als eine Lösung gibt – es kommt nur darauf an, die beste zu finden.",
+    "iAm": "Ich bin",
+    "location": {
+      "line1": "ansässig",
+      "line2": "in Linz"
+    },
+    "relocate": {
+      "line1": "bereit für",
+      "line2": "einen Umzug"
+    },
+    "remote": {
+      "line1": "offen für",
+      "line2": "Remote-Arbeit"
+    },
+    "cta": "Lass uns reden"
+  }
+}

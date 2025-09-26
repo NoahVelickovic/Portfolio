@@ -1,0 +1,26 @@
+{
+  "nav": { "whyMe": "Why me", "skills": "Skills", "projects": "Projects", "contact": "Contact" },
+    "hero": {
+    "contact": "CONTACT ME",
+    "role": "FRONTEND DEVELOPER",
+    "name": "Noah Velickovic"
+  },
+  "whyMe": {
+    "title": "Why me",
+    "text": "Ever since I was a kid, I’ve been drawn to computers and technology. I enjoy figuring things out, solving problems, and building ideas that make life a little simpler. I like to think outside the box, and I truly believe that every problem has more than one solution — it’s just about finding the best one.",
+    "iAm": "I am",
+    "location": {
+      "line1": "located",
+      "line2": "in Linz"
+    },
+    "relocate": {
+      "line1": "open to",
+      "line2": "relocate"
+    },
+    "remote": {
+      "line1": "open to",
+      "line2": "work remote"
+    },
+    "cta": "Let's Talk"
+  }
+}

@@ -1,0 +1,257 @@
+section {
+  height: 400px;
+  margin: 0 24px;
+}
+
+.why-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.why-me-img {
+  height: 400px;
+  margin-right: 36px;
+}
+
+.why-me-text {
+  text-align: right;
+  margin-right: 12px;
+  h3 {
+    margin: 0;
+    font-size: 42px;
+    color: var(--color-orange);
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--color-blue);
+  }
+}
+
+.facts {
+  display: flex;
+  justify-content: flex-end;
+  h3 {
+    margin-right: 64px;
+    margin-top: 0;
+    font-size: 42px;
+    color: var(--color-orange);
+  }
+}
+
+.info-badges {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 50%;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.midbox {
+  margin-right: 90px;
+}
+
+.text {
+  color: var(--color-blue);
+  margin-left: 12px;
+  p {
+    margin: 0;
+  }
+}
+
+.arrow {
+  position: block;
+  pointer-events: none;
+  animation: arrowFloat 2s ease-in-out infinite;
+}
+
+@keyframes arrowFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.arrow-1 {
+  margin-top: 6px;
+  margin-left: -28px;
+  height: 50px;
+}
+
+.arrow-2 {
+  margin-top: 6px;
+  margin-left: 28px;
+  height: 50px;
+  display: block;
+  animation: arrowFloat2 2s ease-in-out infinite;
+}
+
+@keyframes arrowFloat2 {
+  0%,
+  100% {
+    transform: rotate(36deg) translateY(0);
+  }
+  50% {
+    transform: rotate(36deg) translateY(-6px);
+  }
+}
+
+.flex-endbox {
+  display: flex;
+  margin-left: 24px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrow-3 {
+  margin-right: 32px;
+}
+
+.lets-talk-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 24px;
+  margin-top: 24px;
+}
+
+.lets-talk {
+  color: black;
+  padding: 12px 18px;
+  margin: 0;
+  background-color: var(--color-blue);
+  width: 140px;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    color: var(--color-orange);
+  }
+}
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Wrapper für das Icon */
+.marker {
+  position: relative;
+  width: 28px;
+  height: 44px;
+  /* optional: Platzhalter-Hintergrund, nicht nötig: background: ...; */
+}
+
+/* Beide Zustände als Layer übereinander */
+.marker::before,
+.marker::after {
+  content: '';
+  position: absolute;
+  inset: 0; /* top/right/bottom/left: 0 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  will-change: opacity, transform;
+}
+
+/* Normalzustand */
+.marker::before {
+  background-image: url('/assets/Marker.png');
+  opacity: 1;
+}
+
+/* Hoverzustand */
+.marker::after {
+  background-image: url('/assets/Marker bottom hover.png');
+  opacity: 0;
+}
+
+/* Hover-Effekt: cross-fade + leichtes Anheben */
+.location:hover .marker::before {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.location:hover .marker::after {
+  opacity: 1;
+  transform: translateY(-6px);
+}
+
+.icon {
+  position: relative;
+  width: 28px;
+  height: 44px;
+}
+
+.remote {
+  height: 64px;
+  width: 48px;
+}
+
+.icon::before,
+.icon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* --- Remote --- */
+.icon.remote::before {
+  background-image: url('/assets/Icon Remote.png');
+  opacity: 1;
+}
+
+.icon.remote::after {
+  background-image: url('/assets/Icon Remote Hover.png');
+  opacity: 0;
+  height: 64px;
+  width: 48px;
+}
+
+.badge:hover .icon.remote::before {
+  opacity: 0;
+   transform: translateY(-6px);
+}
+
+.badge:hover .icon.remote::after {
+  opacity: 1;
+   transform: translateY(-6px);
+}
+
+/* --- Suitcase --- */
+.icon.suitcase::before {
+  background-image: url('/assets/Suitcase.png');
+  opacity: 1;
+}
+
+.icon.suitcase::after {
+  background-image: url('/assets/Suitcase Hover.png');
+  opacity: 0;
+}
+
+.badge:hover .icon.suitcase::before {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.badge:hover .icon.suitcase::after {
+  opacity: 1;
+  transform: translateY(-6px);
+}
