@@ -22,5 +22,9 @@
       "line2": "work remote"
     },
     "cta": "Let's Talk"
+  },
+  "mySkills": {
+    "title": "My Skills",
+    "challengeMe": "I am always happy to learn new technologies, just tell me what you need!"
   }
 }

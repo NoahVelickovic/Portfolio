@@ -18,5 +18,9 @@
       "line2": "Remote-Arbeit"
     },
     "cta": "Lass uns reden"
+  },
+  "mySkills": {
+    "title": "Meine Fähigkeiten",
+    "challengeMe": "Ich bin immer bereit, neue Technologien zu lernen. Sag mir einfach, was du brauchst!"
   }
 }

@@ -1,0 +1,37 @@
+h2 {
+    font-size: 42px;
+    color: var(--color-orange);
+    margin-left: 24px;
+    margin-top: 100px
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  align-items: center;
+  margin: 24px;
+  height: 400px;
+  gap: 100px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
+p {
+    margin-left: 12px;
+    font-size: 20px;
+    color: var(--color-blue);
+}
+.skill-box p {
+  opacity: 0;
+  pointer-events: none; 
+  transition: opacity 0.3s ease;
+}
+
+.skill-box:hover p {
+  opacity: 1;          
+  pointer-events: auto;
+}
