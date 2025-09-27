@@ -1,0 +1,102 @@
+.project-three-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 200px;
+  height: 371px;
+  margin: 32px auto;
+  width: 90%;
+  opacity: 0;
+  transform: translateX(-75px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.project-three-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.project-three-container > div:first-child {
+  flex: 0 0 50%;
+}
+
+.project-three-container > div:last-child {
+  flex: 0 0 50%;
+}
+
+.project-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 600px;
+  }
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+h4 {
+  font-size: 38px;
+  color: var(--color-blue);
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--color-blue);
+}
+
+p {
+  color: var(--color-blue);
+  font-size: 18px;
+}
+
+.GitHub-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 160px;
+  height: 54px;
+  border: 1px solid var(--color-blue);
+  color: var(--color-orange);
+  text-decoration: none;
+  margin-top: auto;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+
+.Live-Test-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 160px;
+  height: 54px;
+  background-color: var(--color-blue);
+  color: black;
+  text-decoration: none;
+  margin-top: auto;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--color-orange);
+  }
+}
+
+.project-btns {
+  display: flex;
+  gap: 24px;
+  margin-top: auto;
+}

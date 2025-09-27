@@ -6,7 +6,7 @@ import { ProjectThree } from '../projects/project-three/project-three';
 
 @Component({
   selector: 'app-my-projects',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, ProjectOne, ProjectTwo, ProjectThree],
   templateUrl: './my-projects.html',
   styleUrl: './my-projects.scss'
 })

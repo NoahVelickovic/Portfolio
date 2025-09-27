@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Contact } from '../../sections/contact/contact';
 import { Hero } from '../../sections/hero/hero';
 import { MyProjects } from '../../sections/my-projects/my-projects';
@@ -9,7 +8,7 @@ import { WhyMe } from '../../sections/why-me/why-me';
 
 @Component({
   selector: 'app-home',
-  imports: [ RouterOutlet, Contact, Hero, MyProjects, MySkills, Recommendations, WhyMe ],
+  imports: [ Contact, Hero, MyProjects, MySkills, Recommendations, WhyMe ],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

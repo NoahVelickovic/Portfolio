@@ -1,0 +1,316 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 32px 24px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  img {
+    margin-left: 24px;
+    height: 50px;
+  }
+}
+
+h3 {
+  margin-bottom: 4px;
+}
+
+.text {
+  font-size: 20px;
+  color: var(--color-blue);
+}
+
+.content {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.content > div:first-child {
+  flex: 0 0 50%;
+}
+
+.content > div:last-child {
+  flex: 0 0 50%;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.email {
+  .email-icon {
+    position: relative;
+    height: 40px;
+    width: 40px;
+
+    .icon-default,
+    .icon-hover {
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: opacity 0.3s ease;
+    }
+
+    .icon-default {
+      background-image: url('/assets/🦆 icon _email hover.png'); // normales Icon
+      opacity: 1;
+    }
+
+    .icon-hover {
+      background-image: url('/assets/🦆 icon _email_.png'); // Hover-Icon
+      opacity: 0;
+    }
+  }
+
+  /* Effekt, wenn der ganze Link gehovered wird */
+  &:hover .email-icon {
+    .icon-default {
+      opacity: 0;
+    }
+    .icon-hover {
+      opacity: 1;
+    }
+  }
+}
+
+.info {
+  font-size: 22px;
+  color: var(--color-blue);
+  margin: 8px 0;
+}
+
+.tel {
+  .tel-icon {
+    position: relative;
+    height: 40px;
+    width: 40px;
+
+    .icon-default,
+    .icon-hover {
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: opacity 0.3s ease;
+    }
+
+    .icon-default {
+      background-image: url('/assets/🦆 icon _phone hover.png');
+      opacity: 1;
+    }
+
+    .icon-hover {
+      background-image: url('/assets/🦆 icon _phone_.png');
+      opacity: 0;
+    }
+  }
+
+  /* wenn der a-Tag gehovered wird */
+  &:hover .tel-icon {
+    .icon-default {
+      opacity: 0;
+    }
+    .icon-hover {
+      opacity: 1;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  background: url('/assets/Arrow up.png');
+  height: 80px;
+  width: 40px;
+  margin-right: 24px;
+  background-repeat: no-repeat;
+  &:hover {
+    cursor: pointer;
+    background: url('/assets/Arrow up Hover.png');
+    background-repeat: no-repeat;
+    margin-right: 32px;
+    margin-bottom: 12px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1440px;
+}
+
+.form-flex > div:first-child {
+  flex: 0 0 50%;
+}
+
+.form-flex > div:last-child {
+  flex: 0 0 50%;
+}
+
+.form-group input {
+  width: 95%;
+  border-color: var(--color-blue);
+  border-width: 1px;
+  border-style: solid;
+  color: var(--color-blue);
+  background-color: transparent;
+  height: 50px;
+  margin: 10px 0;
+  padding-left: 8px;
+  font-size: 20px;
+  &::placeholder {
+    color: var(--color-blue);
+    opacity: 0.5;
+    font-size: 20px;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-blue); /* dein Akzent-Farbton */
+    box-shadow: 0 0 6px rgba(58, 146, 240, 0.4); /* leichter Glow */
+  }
+}
+
+.form-group-big textarea {
+  width: 95%;
+  border-color: var(--color-blue);
+  border-width: 1px;
+  margin-top: 6px;
+  height: 112px;
+  border-style: solid;
+  color: var(--color-blue);
+  background-color: transparent;
+  font-size: 20px;
+  padding: 8px;
+  resize: vertical;
+  &::placeholder {
+    color: var(--color-blue);
+    opacity: 0.5;
+    font-size: 20px;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-blue); /* dein Akzent-Farbton */
+    box-shadow: 0 0 6px rgba(58, 146, 240, 0.4); /* leichter Glow */
+  }
+}
+
+.submit-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group-checkbox {
+  display: flex;
+  margin-top: 20px;
+  width: 80%;
+  label {
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--color-blue);
+
+    a {
+      color: var(--color-orange);
+      text-decoration: none;
+      &:hover {
+        color: rgb(251, 142, 74);
+      }
+    }
+  }
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--color-orange);
+  border-radius: 4px;
+  position: relative;
+  &:hover {
+    background-color: var(--color-blue);
+  }
+  &:checked {
+    background-color: var(--color-blue);
+  }
+  &:checked::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--color-orange);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}
+
+.toast {
+  position: fixed;
+  top: 50%;
+  right: -400px; /* Start rechts draußen */
+  transform: translateY(-50%);
+  background: var(--color-blue);
+  color: var(--color-orange);
+  padding: 16px 32px;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 0.6s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  right: 50%;
+  transform: translate(50%, -50%);
+  opacity: 1;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 12px;
+  margin-right: 16px;
+  background-color: transparent;
+  height: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 120px;
+  color: var(--color-orange);
+  border: 1px solid var(--color-blue);
+  transition: color 0.3s ease; /* 👈 sorgt fürs Fading */
+
+  &:hover {
+    color: var(--color-blue); /* 👈 Ziel-Farbe */
+  }
+}

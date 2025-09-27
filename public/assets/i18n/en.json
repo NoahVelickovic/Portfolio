@@ -29,5 +29,21 @@
   },
   "myProjects": {
     "title": "My Projects"
+  },
+    "projects": {
+    "join": {
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "sharkie": {
+      "description": "A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale."
+    }
+  },
+    "testimonials": {
+    "headline": "Need a teamplayer? Here’s what my colleagues said about me",
+    "dora": {
+      "name": "Dora Telekesi",
+      "project": "Project Join",
+      "text": "’’Working with Noah was great – reliable, creative, and always full of good ideas. He not only pushed our project forward technically but also made teamwork really enjoyable.’’"
+    }
   }
 }

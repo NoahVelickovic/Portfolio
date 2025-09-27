@@ -25,5 +25,20 @@
   },
   "myProjects": {
     "title": "Meine Projekte"
-  }
+  },
+    "projects": {
+    "join": {
+      "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+    },
+    "sharkie": {
+      "description": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen."
+    }
+  }, 
+   "testimonials": {
+    "headline": "Brauchst du einen Teamplayer? So haben meine Kollegen über mich gesprochen",
+    "dora": {
+      "project": "Projekt Join",
+      "text": "’’Die Zusammenarbeit mit Noah war super – zuverlässig, kreativ und immer mit guten Ideen am Start. Er hat unser Projekt nicht nur technisch vorangebracht, sondern auch das Arbeiten im Team richtig angenehm gemacht.’’"
+    }
+   }
 }

@@ -1,8 +1,11 @@
-h2 {
-    font-size: 42px;
-    color: var(--color-orange);
-    margin-left: 24px;
-    margin-top: 100px
+.skills {
+  padding-top: 80px;
+}
+
+h3 {
+  font-size: 42px;
+  color: var(--color-orange);
+  margin-left: 24px;
 }
 
 .skills-container {
@@ -12,26 +15,34 @@ h2 {
   margin: 24px;
   height: 400px;
   gap: 100px;
+  opacity: 0;
+  transform: translateY(50px); /* Start: leicht nach unten verschoben */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.skills-container.visible {
+  opacity: 1;
+  transform: translateY(0); /* Endposition */
 }
 
 .flex {
-    display: flex;
-    align-items: center;
-    width: 400px;
+  display: flex;
+  align-items: center;
+  width: 400px;
 }
 
 p {
-    margin-left: 12px;
-    font-size: 20px;
-    color: var(--color-blue);
+  margin-left: 12px;
+  font-size: 20px;
+  color: var(--color-blue);
 }
 .skill-box p {
   opacity: 0;
-  pointer-events: none; 
+  pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
 .skill-box:hover p {
-  opacity: 1;          
+  opacity: 1;
   pointer-events: auto;
 }

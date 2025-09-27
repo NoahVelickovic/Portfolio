@@ -68,3 +68,14 @@ html::before {
   mix-blend-mode: screen;
   opacity: 0.6;
 }
+
+.main-content {
+  overflow: visible;   /* kein eigener Scroll-Container */
+  height: auto;        /* Window scrollt */
+  min-height: 100svh;  /* füllt die Höhe */
+}
+
+h3 {
+  color: var(--color-orange);
+  font-size: 54px !important;
+}
