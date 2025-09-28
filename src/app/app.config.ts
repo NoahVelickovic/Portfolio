@@ -27,13 +27,11 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
 
-    // ✅ Moderne ngx-translate-Konfiguration (Standalone + Provider-APIs)
     provideTranslateService({
       loader: provideTranslateHttpLoader({
         prefix: '/assets/i18n/',
         suffix: '.json',
       }),
-      // setDefaultLang ist deprecated → nutze "fallbackLang" + "lang"
       fallbackLang: 'de',
       lang: 'de',
     }),

@@ -1,34 +1,45 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact.html',
   styleUrls: ['./contact.scss']
 })
 export class Contact {
-  toastVisible = false;
+  toastVisible = signal(false);
+  private hideTimerId: ReturnType<typeof setTimeout> | null = null;
 
-  onSubmit(form: NgForm) {
+  async onSubmit(form: NgForm) {
     if (form.invalid) return;
 
-    const { name, email, message, privacy } = form.value;
+    const { name, email, message } = form.value;
 
-    // 🔹 Hier könntest du EmailJS oder einen Backend-API-Call einbauen
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
-    console.log('Privacy accepted:', privacy);
+    try {
+      await emailjs.send(
+        'service_ge5ydbk',
+        'template_zsvug1p',
+        { name, email, message },
+        { publicKey: '8b0jsP3HU_yrksfC_' }
+      );
 
-    // Formular zurücksetzen
-    form.resetForm();
+      this.showToast();
+      form.resetForm();
+    } catch (err) {
+      console.error('Mail senden fehlgeschlagen:', err);
+    }
+  }
 
-    // Toast anzeigen
-    this.toastVisible = true;
-
-    // Nach 3 Sekunden Toast wieder ausblenden
-    setTimeout(() => (this.toastVisible = false), 3000);
+  private showToast() {
+    this.toastVisible.set(true);
+    if (this.hideTimerId) clearTimeout(this.hideTimerId);
+    this.hideTimerId = setTimeout(() => {
+      this.toastVisible.set(false);
+      this.hideTimerId = null;
+    }, 3000);
   }
 }

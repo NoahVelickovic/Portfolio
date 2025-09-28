@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { get } from 'http';
 
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive, TranslatePipe],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })

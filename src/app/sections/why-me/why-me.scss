@@ -165,20 +165,17 @@ section {
   gap: 8px;
 }
 
-/* Wrapper für das Icon */
 .marker {
   position: relative;
   width: 28px;
   height: 44px;
-  /* optional: Platzhalter-Hintergrund, nicht nötig: background: ...; */
 }
 
-/* Beide Zustände als Layer übereinander */
 .marker::before,
 .marker::after {
   content: '';
   position: absolute;
-  inset: 0; /* top/right/bottom/left: 0 */
+  inset: 0; 
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -186,19 +183,16 @@ section {
   will-change: opacity, transform;
 }
 
-/* Normalzustand */
 .marker::before {
   background-image: url('/assets/Marker.png');
   opacity: 1;
 }
 
-/* Hoverzustand */
 .marker::after {
   background-image: url('/assets/Marker bottom hover.png');
   opacity: 0;
 }
 
-/* Hover-Effekt: cross-fade + leichtes Anheben */
 .location:hover .marker::before {
   opacity: 0;
   transform: translateY(-6px);
@@ -231,7 +225,6 @@ section {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* --- Remote --- */
 .icon.remote::before {
   background-image: url('/assets/Icon Remote.png');
   opacity: 1;
@@ -254,7 +247,6 @@ section {
    transform: translateY(-6px);
 }
 
-/* --- Suitcase --- */
 .icon.suitcase::before {
   background-image: url('/assets/Suitcase.png');
   opacity: 1;

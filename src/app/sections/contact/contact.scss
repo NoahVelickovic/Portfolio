@@ -61,17 +61,16 @@ a {
     }
 
     .icon-default {
-      background-image: url('/assets/🦆 icon _email hover.png'); // normales Icon
+      background-image: url('/assets/🦆 icon _email hover.png');
       opacity: 1;
     }
 
     .icon-hover {
-      background-image: url('/assets/🦆 icon _email_.png'); // Hover-Icon
+      background-image: url('/assets/🦆 icon _email_.png');
       opacity: 0;
     }
   }
 
-  /* Effekt, wenn der ganze Link gehovered wird */
   &:hover .email-icon {
     .icon-default {
       opacity: 0;
@@ -114,7 +113,6 @@ a {
     }
   }
 
-  /* wenn der a-Tag gehovered wird */
   &:hover .tel-icon {
     .icon-default {
       opacity: 0;
@@ -187,8 +185,8 @@ a {
 
   &:focus {
     outline: none;
-    border-color: var(--color-blue); /* dein Akzent-Farbton */
-    box-shadow: 0 0 6px rgba(58, 146, 240, 0.4); /* leichter Glow */
+    border-color: var(--color-blue);
+    box-shadow: 0 0 6px rgba(58, 146, 240, 0.4);
   }
 }
 
@@ -212,8 +210,8 @@ a {
 
   &:focus {
     outline: none;
-    border-color: var(--color-blue); /* dein Akzent-Farbton */
-    box-shadow: 0 0 6px rgba(58, 146, 240, 0.4); /* leichter Glow */
+    border-color: var(--color-blue);
+    box-shadow: 0 0 6px rgba(58, 146, 240, 0.4);
   }
 }
 
@@ -280,20 +278,22 @@ a {
 .toast {
   position: fixed;
   top: 50%;
-  right: -400px; /* Start rechts draußen */
-  transform: translateY(-50%);
-  background: var(--color-blue);
-  color: var(--color-orange);
-  padding: 16px 32px;
-  font-size: 20px;
+  left: 50%;
+  transform: translate(150%, -50%);
   opacity: 0;
-  transition: all 0.6s ease;
+  background: var(--color-blue);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 18px;
   z-index: 9999;
+  pointer-events: none;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  will-change: transform, opacity;
 }
 
 .toast.show {
-  right: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(-50%, -50%);
   opacity: 1;
 }
 
@@ -308,9 +308,9 @@ button {
   width: 120px;
   color: var(--color-orange);
   border: 1px solid var(--color-blue);
-  transition: color 0.3s ease; /* 👈 sorgt fürs Fading */
+  transition: color 0.3s ease;
 
   &:hover {
-    color: var(--color-blue); /* 👈 Ziel-Farbe */
+    color: var(--color-blue);
   }
 }

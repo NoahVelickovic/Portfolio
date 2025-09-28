@@ -6,45 +6,36 @@
 
   <div class="content">
     <p class="text">
-      I love transforming ideas into real results and I’m always eager to take on new challenges. 
-      If you’re looking for someone who adds energy, focus, and reliable value to your projects, let’s connect.
+      I love transforming ideas into real results and I’m always eager to take on new challenges. If
+      you’re looking for someone who adds energy, focus, and reliable value to your projects, let’s
+      connect.
     </p>
   </div>
-
   <section class="contact-form">
-    <!-- Template-Driven Angular Form -->
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="form-flex">
         <div>
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" ngModel required />
           </div>
-
           <div class="form-group">
             <input type="email" name="email" placeholder="Your E-Mail" ngModel required />
           </div>
         </div>
-
         <div class="form-group-big">
           <textarea name="message" rows="5" placeholder="Your Message" ngModel required></textarea>
         </div>
       </div>
-
       <div class="submit-flex">
         <div class="form-group-checkbox">
           <input type="checkbox" id="privacy" name="privacy" ngModel required class="checkbox" />
           <label for="privacy">
-            I've read the <a href="/privacy" target="_blank">Privacy Policy</a> and agree.
+            I've read the &nbsp;<a href="/privacy" target="_blank">Privacy Policy</a> &nbsp; and agree.
           </label>
         </div>
-
         <button type="submit" class="send-btn">Senden</button>
       </div>
     </form>
   </section>
-
-  <!-- Toast Message -->
-  <div id="toast" class="toast" [class.show]="toastVisible">
-    Ihre Nachricht wurde gesendet!
-  </div>
+  <div class="toast" [class.show]="toastVisible()">Ihre Nachricht wurde gesendet!</div>
 </section>
