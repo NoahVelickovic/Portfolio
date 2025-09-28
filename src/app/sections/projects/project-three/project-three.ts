@@ -18,7 +18,7 @@ export class ProjectThree implements AfterViewInit {
     const getEl = () =>
       this.el?.nativeElement ?? document.querySelector<HTMLElement>('.project-three-container');
 
-    const threshold = 0.9; // wie bei den anderen
+    const threshold = 0.75;
     const check = () => {
       const target = getEl();
       if (!target) return;
@@ -26,7 +26,7 @@ export class ProjectThree implements AfterViewInit {
       const rect = target.getBoundingClientRect();
       const vh = window.innerHeight || document.documentElement.clientHeight;
 
-      if (rect.height === 0) return; // warten bis Layout/Bilder Höhe liefern
+      if (rect.height === 0) return; 
 
       if (rect.top <= vh * threshold) {
         target.classList.add('visible');

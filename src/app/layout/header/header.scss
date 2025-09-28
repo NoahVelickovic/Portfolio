@@ -5,6 +5,7 @@
   font-weight: bold;
   margin: 12px 0;
   margin-right: 16px;
+  text-decoration: none;
 }
 
 nav {
@@ -23,17 +24,17 @@ nav {
 }
 
 .header {
-  position: fixed; /* bleibt oben kleben */
+  position: fixed;
   width: 100%;
   max-width: 1440px;
-  height: 80px; /* gleiche Höhe wie bisher */
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-  background: transparent; /* halbtransparent, passe Farbe an */
-  backdrop-filter: blur(6px); /* leichter Blur hinter dem Header */
-  z-index: 1000; /* über allem */
+  background: transparent; 
+  backdrop-filter: blur(6px);
+  z-index: 1000;
 }
 
 .header-left {

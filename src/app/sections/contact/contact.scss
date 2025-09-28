@@ -177,6 +177,7 @@ a {
   margin: 10px 0;
   padding-left: 8px;
   font-size: 20px;
+  font-family: 'Roboto-Mono', monospace;
   &::placeholder {
     color: var(--color-blue);
     opacity: 0.5;
@@ -313,4 +314,20 @@ button {
   &:hover {
     color: var(--color-blue);
   }
+}
+
+.error {
+  color: #e53935;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+input.invalid,
+textarea.invalid {
+  border-color: #e53935;
+}
+
+.send-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

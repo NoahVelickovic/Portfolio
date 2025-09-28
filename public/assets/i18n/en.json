@@ -45,5 +45,33 @@
       "project": "Project Join",
       "text": "’’Working with Noah was great – reliable, creative, and always full of good ideas. He not only pushed our project forward technically but also made teamwork really enjoyable.’’"
     }
+  },
+"contact": {
+    "title": "Contact me",
+    "text": "I love transforming ideas into real results and I’m always eager to take on new challenges. If you’re looking for someone who brings energy, focus, and reliable value to your projects, let’s connect.",
+    "name": "Your Name",
+    "email": "Your E-Mail",
+    "message": "Your Message",
+    "privacy": {
+      "part1": "I've read the",
+      "part2": "Privacy Policy",
+      "part3": "and I agree to the processing of my data."
+    },
+       "errors": {
+      "nameRequired": "Please enter your name.",
+      "nameMin": "Name must be at least {{min}} characters.",
+      "emailRequired": "Please enter your email.",
+      "emailInvalid": "Please enter a valid email.",
+      "messageRequired": "Please enter a message.",
+      "messageMin": "Message must be at least {{min}} characters.",
+      "privacyRequired": "Please accept the privacy policy."
+    },
+    "send": "Send",
+    "toast": "Your message has been sent!"
+  },
+   "footer": {
+    "role": "Frontend Developer",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy"
   }
 }

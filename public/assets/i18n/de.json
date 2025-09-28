@@ -40,5 +40,33 @@
       "project": "Projekt Join",
       "text": "’’Die Zusammenarbeit mit Noah war super – zuverlässig, kreativ und immer mit guten Ideen am Start. Er hat unser Projekt nicht nur technisch vorangebracht, sondern auch das Arbeiten im Team richtig angenehm gemacht.’’"
     }
-   }
+   },
+  "contact": {
+    "title": "Kontaktiere mich",
+    "text": "Ich liebe es, Ideen in echte Ergebnisse zu verwandeln und freue mich immer auf neue Herausforderungen. Wenn du jemanden suchst, der Energie, Fokus und zuverlässigen Wert in deine Projekte bringt, lass uns in Kontakt treten.",
+    "name": "Dein Name",
+    "email": "Deine E-Mail",
+    "message": "Deine Nachricht",
+    "privacy": {
+      "part1": "Ich habe die",
+      "part2": "Datenschutzerklärung",
+      "part3": "gelesen und stimme der Verarbeitung meiner Daten zu."
+    },
+      "errors": {
+      "nameRequired": "Bitte gib deinen Namen ein.",
+      "nameMin": "Der Name muss mindestens {{min}} Zeichen haben.",
+      "emailRequired": "Bitte gib deine E-Mail ein.",
+      "emailInvalid": "Bitte gib eine gültige E-Mail ein.",
+      "messageRequired": "Bitte gib eine Nachricht ein.",
+      "messageMin": "Die Nachricht muss mindestens {{min}} Zeichen haben.",
+      "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung."
+    },
+    "send": "Senden",
+    "toast": "Ihre Nachricht wurde gesendet!"
+  },
+  "footer": {
+    "role": "Frontend Entwickler",
+    "legal": "Impressum",
+    "privacy": "Datenschutzerklärung"
+  }
 }

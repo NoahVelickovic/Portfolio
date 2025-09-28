@@ -16,13 +16,13 @@ h3 {
   height: 400px;
   gap: 100px;
   opacity: 0;
-  transform: translateY(50px); /* Start: leicht nach unten verschoben */
+  transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .skills-container.visible {
   opacity: 1;
-  transform: translateY(0); /* Endposition */
+  transform: translateY(0);
 }
 
 .flex {

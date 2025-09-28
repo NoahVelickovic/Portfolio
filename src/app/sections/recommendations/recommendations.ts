@@ -18,7 +18,7 @@ export class Recommendations implements AfterViewInit {
     const getEl = () =>
       this.el?.nativeElement ?? document.querySelector<HTMLElement>('.recommendations');
 
-    const threshold = 0.75; // gleiche Logik wie in ProjectOne
+    const threshold = 0.75;
     const check = () => {
       const target = getEl();
       if (!target) return;
