@@ -1,113 +1,147 @@
-<section class="contact-form">
-  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
-    <div class="form-flex">
+<section class="contact-top">
+  <div class="header">
+    <h3>Contact me</h3>
+    <img src="/assets/Arrow 05.png" />
+  </div>
+  <div class="content">
+    <p class="text">
+      I love transforming ideas into real results and I’m always eager to take on new challenges. If
+      you’re looking for someone who adds energy, focus, and reliable value to your projects, let’s
+      connect.
+    </p>
+    <div class="flex">
       <div>
-        <div class="form-group">
-          <input
-            type="text"
-            name="name"
-            [placeholder]="'contact.name' | translate"
+        <a href="mailto:noah.velic@hotmail.com" class="email">
+          <div class="email-icon">
+            <div class="icon-default"></div>
+            <div class="icon-hover"></div>
+          </div>
+          <p class="info">E-mail: noah.velic@hotmail.com</p>
+        </a>
+        <a href="tel:+4369910992553" class="tel">
+          <div class="tel-icon">
+            <div class="icon-default"></div>
+            <div class="icon-hover"></div>
+          </div>
+          <p class="info">Tel: +43 699 10992553</p>
+        </a>
+      </div>
+      <a href="#hero" class="arrow"></a>
+    </div>
+  </div>
+  <section class="contact-form">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+      <div class="form-flex">
+        <div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              [placeholder]="'contact.name' | translate"
+              ngModel
+              #nameCtrl="ngModel"
+              required
+              minlength="2"
+              [class.invalid]="
+                nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)
+              "
+            />
+            <div
+              class="error"
+              *ngIf="
+                nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)
+              "
+            >
+              <span *ngIf="nameCtrl.errors?.['required']">{{
+                'contact.errors.nameRequired' | translate
+              }}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              [placeholder]="'contact.email' | translate"
+              ngModel
+              #emailCtrl="ngModel"
+              required
+              autocomplete="email"
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+              [class.invalid]="emailCtrl.invalid && (emailCtrl.touched || contactForm.submitted)"
+            />
+
+            <div
+              class="error"
+              *ngIf="emailCtrl.invalid && (emailCtrl.touched || contactForm.submitted)"
+            >
+              <span *ngIf="emailCtrl.errors?.['required']">
+                {{ 'contact.errors.emailRequired' | translate }}
+              </span>
+              <span *ngIf="emailCtrl.errors?.['email'] || emailCtrl.errors?.['pattern']">
+                {{ 'contact.errors.emailInvalid' | translate }}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-big">
+          <textarea
+            name="message"
+            rows="5"
+            [placeholder]="'contact.message' | translate"
             ngModel
-            #nameCtrl="ngModel"
+            #messageCtrl="ngModel"
             required
-            minlength="2"
+            minlength="10"
             [class.invalid]="
-              nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched || contactForm.submitted)
+              messageCtrl.invalid &&
+              (messageCtrl.touched || contactForm.submitted)
             "
-          />
+          ></textarea>
           <div
             class="error"
             *ngIf="
-              nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched || contactForm.submitted)
+              messageCtrl.invalid &&
+              (messageCtrl.touched || contactForm.submitted)
             "
           >
-            <span *ngIf="nameCtrl.errors?.['required']">{{
-              'contact.errors.nameRequired' | translate
+            <span *ngIf="messageCtrl.errors?.['required']">{{
+              'contact.errors.messageRequired' | translate
+            }}</span>
+            <span *ngIf="messageCtrl.errors?.['minlength']">{{
+              'contact.errors.messageMin' | translate : { min: 10 }
             }}</span>
           </div>
         </div>
-<div class="form-group">
-<input
-  type="email"
-  name="email"
-  [placeholder]="'contact.email' | translate"
-  ngModel
-  #emailCtrl="ngModel"
-  required
-  autocomplete="email"
-  pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
-  [class.invalid]="emailCtrl.invalid && (emailCtrl.touched || contactForm.submitted)"
-/>
-
-<div class="error" *ngIf="emailCtrl.invalid && (emailCtrl.touched || contactForm.submitted)">
-  <span *ngIf="emailCtrl.errors?.['required']">
-    {{ 'contact.errors.emailRequired' | translate }}
-  </span>
-  <span *ngIf="emailCtrl.errors?.['email'] || emailCtrl.errors?.['pattern']">
-    {{ 'contact.errors.emailInvalid' | translate }}
-  </span>
-</div>
-</div>
       </div>
-      <div class="form-group-big">
-        <textarea
-          name="message"
-          rows="5"
-          [placeholder]="'contact.message' | translate"
-          ngModel
-          #messageCtrl="ngModel"
-          required
-          minlength="10"
-          [class.invalid]="
-            messageCtrl.invalid &&
-            (messageCtrl.dirty || messageCtrl.touched || contactForm.submitted)
-          "
-        ></textarea>
-        <div
-          class="error"
-          *ngIf="
-            messageCtrl.invalid &&
-            (messageCtrl.dirty || messageCtrl.touched || contactForm.submitted)
-          "
-        >
-          <span *ngIf="messageCtrl.errors?.['required']">{{
-            'contact.errors.messageRequired' | translate
-          }}</span>
-          <span *ngIf="messageCtrl.errors?.['minlength']">{{
-            'contact.errors.messageMin' | translate : { min: 10 }
-          }}</span>
+
+      <div class="submit-flex">
+        <div class="form-group-checkbox">
+          <input
+            type="checkbox"
+            id="privacy"
+            name="privacy"
+            ngModel
+            #privacyCtrl="ngModel"
+            required
+            class="checkbox"
+          />
+          <label for="privacy">
+            {{ 'contact.privacy.part1' | translate }}
+            &nbsp;<a href="/privacy">{{ 'contact.privacy.part2' | translate }}</a
+            >&nbsp;
+            {{ 'contact.privacy.part3' | translate }}
+          </label>
         </div>
+        <div class="error" *ngIf="privacyCtrl.invalid && contactForm.submitted">
+          {{ 'contact.errors.privacyRequired' | translate }}
+        </div>
+        <button type="submit" class="send-btn" [disabled]="!contactForm.valid">
+          {{ 'contact.send' | translate }}
+        </button>
       </div>
-    </div>
-
-    <div class="submit-flex">
-
-      <div class="form-group-checkbox">
-        <input
-          type="checkbox"
-          id="privacy"
-          name="privacy"
-          ngModel
-          #privacyCtrl="ngModel"
-          required
-          class="checkbox"
-        />
-        <label for="privacy">
-          {{ 'contact.privacy.part1' | translate }}
-          &nbsp;<a href="/privacy">{{ 'contact.privacy.part2' | translate }}</a
-          >&nbsp;
-          {{ 'contact.privacy.part3' | translate }}
-        </label>
-      </div>
-      <div class="error" *ngIf="privacyCtrl.invalid && contactForm.submitted">
-        {{ 'contact.errors.privacyRequired' | translate }}
-      </div>
-      <button type="submit" class="send-btn" [disabled]="!contactForm.valid">
-        {{ 'contact.send' | translate }}
-      </button>
-    </div>
-  </form>
+    </form>
+  </section>
+  <div class="toast" [class.show]="toastVisible()">
+    {{ 'contact.toast' | translate }}
+  </div>
 </section>
-<div class="toast" [class.show]="toastVisible()">
-  {{ 'contact.toast' | translate }}
-</div>

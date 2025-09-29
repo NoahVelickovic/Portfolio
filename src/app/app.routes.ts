@@ -16,9 +16,9 @@ export const routes: Routes = [  {
       import('./sections/contact/contact').then(m => m.Contact),
   },
    {
-    path: 'legal-notice',
+    path: 'imprint',
     loadComponent: () =>
-      import('./pages/legal-notice/legal-notice').then(m => m.LegalNotice),
+      import('./pages/imprint/imprint').then(m => m.Imprint),
   },
   {
     path: 'privacy',

@@ -73,5 +73,36 @@
     "role": "Frontend Developer",
     "legal": "Legal Notice",
     "privacy": "Privacy Policy"
+  },
+   "IMPRINT": {
+    "TITLE": "Imprint",
+    "LEGAL": "Information according to § 5 ECG:",
+    "NAME": "Noah Velickovic",
+    "ADDRESS": "Herderstraße 27<br>4060 Leonding<br>Austria",
+    "CONTACT": "Contact:",
+    "EMAIL": "E-Mail:",
+    "DISCLAIMER_TITLE": "Disclaimer:",
+    "DISCLAIMER_TEXT": "The contents of this website have been created with the greatest care. However, I cannot guarantee the accuracy, completeness or timeliness of the content.",
+    "LINKS_TITLE": "Liability for links:",
+    "LINKS_TEXT": "This website contains links to external third-party websites, the content of which I have no influence over. Therefore, I cannot accept any responsibility for these external contents. The respective provider or operator of the linked pages is always responsible for the content.",
+    "COPYRIGHT_TITLE": "Copyright:",
+    "COPYRIGHT_TEXT": "The content and works created by the site operator on this website are subject to Austrian copyright law. Contributions by third parties are marked as such. The duplication, editing, distribution and any kind of use outside the limits of copyright law require the written consent of the respective author or creator."
+  },
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+    "GENERAL_TITLE": "General Information",
+    "GENERAL_TEXT": "Protecting your personal data is very important to me. Therefore, your data is processed exclusively on the basis of the legal provisions (GDPR, TKG 2003).",
+    
+    "DATA_COLLECTION_TITLE": "Data Collection on this Website",
+    "DATA_COLLECTION_TEXT": "No personal data is stored automatically. If you contact me by e-mail, the data you provide will be stored for the purpose of processing the request. This data will not be shared without your consent.",
+    
+    "COOKIES_TITLE": "Cookies",
+    "COOKIES_TEXT": "This website does not use cookies that collect personal data. Technically necessary cookies are only used to ensure the functionality of the site.",
+    
+    "THIRD_PARTY_TITLE": "Third-Party Services",
+    "THIRD_PARTY_TEXT": "If external content (e.g. Google Fonts, embedded videos) is used, it is subject to the privacy policies of the respective providers.",
+    
+    "RIGHTS_TITLE": "Your Rights",
+    "RIGHTS_TEXT": "You have the right to access, rectification, erasure, restriction, data portability, withdrawal and objection. If you believe that the processing of your data violates data protection law, you may lodge a complaint with the supervisory authority."
   }
 }

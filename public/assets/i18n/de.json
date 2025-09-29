@@ -68,5 +68,36 @@
     "role": "Frontend Entwickler",
     "legal": "Impressum",
     "privacy": "Datenschutzerklärung"
+  },
+    "IMPRINT": {
+    "TITLE": "Impressum",
+    "LEGAL": "Angaben gemäß § 5 ECG:",
+    "NAME": "Noah Velickovic",
+    "ADDRESS": "Herderstraße 27<br>4060 Leonding<br>Österreich",
+    "CONTACT": "Kontakt:",
+    "EMAIL": "E-Mail:",
+    "DISCLAIMER_TITLE": "Haftungsausschluss:",
+    "DISCLAIMER_TEXT": "Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehme ich jedoch keine Gewähr.",
+    "LINKS_TITLE": "Haftung für Links:",
+    "LINKS_TEXT": "Diese Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+    "COPYRIGHT_TITLE": "Urheberrecht:",
+    "COPYRIGHT_TEXT": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Webseite unterliegen dem österreichischen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+  },
+    "PRIVACY": {
+    "TITLE": "Datenschutzerklärung",
+    "GENERAL_TITLE": "Allgemeine Hinweise",
+    "GENERAL_TEXT": "Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ihre Daten werden daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003) verarbeitet.",
+    
+    "DATA_COLLECTION_TITLE": "Datenerhebung auf dieser Website",
+    "DATA_COLLECTION_TEXT": "Es werden keine personenbezogenen Daten automatisiert gespeichert. Wenn Sie per E-Mail Kontakt mit mir aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage gespeichert. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.",
+    
+    "COOKIES_TITLE": "Cookies",
+    "COOKIES_TEXT": "Diese Website verwendet keine Cookies, die personenbezogene Daten erfassen. Technisch notwendige Cookies werden lediglich genutzt, um die Funktionalität der Seite sicherzustellen.",
+    
+    "THIRD_PARTY_TITLE": "Dienste von Drittanbietern",
+    "THIRD_PARTY_TEXT": "Sofern externe Inhalte (z. B. Google Fonts, eingebettete Videos) verwendet werden, unterliegen diese den Datenschutzrichtlinien der jeweiligen Anbieter.",
+    
+    "RIGHTS_TITLE": "Ihre Rechte",
+    "RIGHTS_TEXT": "Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der Aufsichtsbehörde beschweren."
   }
 }
