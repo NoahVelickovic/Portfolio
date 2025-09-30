@@ -31,8 +31,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
-  background: transparent; 
+  margin: 0 auto;
+  background: transparent;
   backdrop-filter: blur(6px);
   z-index: 1000;
 }
@@ -42,6 +42,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 42px;
+  margin-left: 24px;
 }
 
 .header-right {
@@ -50,6 +51,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 24px;
   p:hover {
     cursor: pointer;
     color: var(--color-blue);
@@ -58,4 +60,100 @@ nav {
 
 .active {
   color: var(--color-blue);
+}
+
+.burger-box {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.none {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+.burger-box {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.burger-box span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-orange);   
+  border-radius: 2px;
+  transition: all 0.35s ease-in-out;
+}
+
+.burger-box.active-burger span:nth-child(1) {
+  transform: translateY(15px) rotate(45deg);
+}
+
+.burger-box.active-burger span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-box.active-burger span:nth-child(3) {
+  transform: translateY(-15px) rotate(-45deg);
+}
+
+  .header-right {
+    z-index: 2;
+    position: fixed;
+    align-items: flex-end;
+    width: 100%;
+    height: 780px;
+    justify-content: center;
+    background-color: var(--color-blue);
+    margin: 0;
+    padding-bottom: 55px;
+    margin-top: 36px;
+    left: 0;
+    right: 0;
+    p {
+      margin: 0;
+    }
+    background: linear-gradient(180deg, var(--color-bg-dark), rgb(42, 42, 113));
+  }
+
+  .burger-menu-active {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    top: 80px;
+    left: 0;
+    right: 0;
+    gap: 55px;
+    z-index: 3;
+    width: 100%;
+  }
 }

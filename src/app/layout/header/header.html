@@ -1,19 +1,25 @@
 <div class="header">
   <div class="header-left">
-    <a href="#hero" class="header-logo">&lt; NV &gt;</a>
-    <nav>
- <a routerLink="./" fragment="why-me">{{ 'nav.whyMe' | translate }}</a>
-  <a routerLink="./" fragment="skills">{{ 'nav.skills' | translate }}</a>
-  <a routerLink="./" fragment="projects">{{ 'nav.projects' | translate }}</a>
-  <a routerLink="./" fragment="contact">{{ 'nav.contact' | translate }}</a>
+    <a href="#hero" class="header-logo" id="logo">&lt; NV &gt;</a>
+    <nav class="menu" id="menu">
+      <a routerLink="./" fragment="why-me" (click)="toggleMenu()">{{ 'nav.whyMe' | translate }}</a>
+      <a routerLink="./" fragment="skills" (click)="toggleMenu()">{{ 'nav.skills' | translate }}</a>
+      <a routerLink="./" fragment="projects" (click)="toggleMenu()">{{
+        'nav.projects' | translate
+      }}</a>
+      <a routerLink="./" fragment="contact" (click)="toggleMenu()">{{
+        'nav.contact' | translate
+      }}</a>
     </nav>
   </div>
-  <div class="header-right">
-   <p 
-      [class.active]="current === 'de'" 
-      (click)="switchLang('de')" id="lang-de">DE</p> | 
-    <p 
-      [class.active]="current === 'en'" 
-      (click)="switchLang('en')" id="lang-en">EN</p>
+  <div class="burger-box" id="burger-box" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="header-right" id="header-right">
+    <p [class.active]="current === 'de'" (click)="switchLang('de')" id="lang-de">DE</p>
+    |
+    <p [class.active]="current === 'en'" (click)="switchLang('en')" id="lang-en">EN</p>
   </div>
 </div>
