@@ -1,7 +1,16 @@
 <section class="recommendations" #recommendations>
   <p class="name">{{ 'testimonials.headline' | translate }}</p>
   <div class="slider">
-    <div class="flex">
+    <div
+      class="flex"
+      #track
+      (pointerdown)="onPointerDown($event)"
+      (pointermove)="onPointerMove($event)"
+      (pointerup)="onPointerUp($event)"
+      (pointercancel)="onPointerUp($event)"
+      (pointerleave)="onPointerUp($event)"
+      [class.dragging]="dragging"
+    >
       <img src="/assets/Arrow 04.png" />
       <div class="card">
         <p class="name">Dora Telekesi</p>

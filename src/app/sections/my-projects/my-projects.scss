@@ -4,3 +4,9 @@ h3 {
     text-align: center;
     padding-top: 120px;
 }
+
+@media (max-width: 600px) {
+  h3 {
+    font-size: 32px !important;
+  }
+}

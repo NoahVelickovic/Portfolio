@@ -46,7 +46,19 @@ img {
   transform: translateY(0);
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
+ .flex {
+  .text {
+    font-size: 18px !important; 
+  }
+
+  .name {
+    font-size: 20px !important;;
+  }
+ }
+}
+
+@media (max-width: 800px) {
 
   img {
     display: none;
@@ -57,6 +69,7 @@ img {
   width: 100%;
   max-width: 500px;
   margin-inline: auto;
+  margin-top: 24px;
 }
 
 .flex {
@@ -69,15 +82,20 @@ img {
   -webkit-overflow-scrolling: touch; 
   overscroll-behavior-x: contain;   
   scrollbar-width: none;  
+  margin: 8px;
+   scroll-behavior: smooth;
+  cursor: grab;
+  touch-action: pan-x; 
+  &.dragging { cursor: grabbing; user-select: none; }
 }
 
 .track::-webkit-scrollbar { display: none; }
 
 .card {
   flex: 0 0 auto;
-  width: 280px !important;
-  height: 280px;
-  padding: 18px;
+  width: 260px !important;
+  height: 260px;
+  padding: 8px;
   border: 2px solid #49e0d6;
   color: var(--color-blue);
   scroll-snap-align: start;
@@ -89,7 +107,8 @@ img {
   }
 
   .text {
-    font-size: 16px;
+    font-size: 16px !important;
+    margin: 8px 0;
   }
 
 }

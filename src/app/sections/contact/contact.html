@@ -1,13 +1,11 @@
 <section class="contact-top">
   <div class="header">
-    <h3>Contact me</h3>
+    <h3>{{ 'contact.title' | translate }}</h3>
     <img src="/assets/Arrow 05.png" />
   </div>
   <div class="content">
     <p class="text">
-      I love transforming ideas into real results and I’m always eager to take on new challenges. If
-      you’re looking for someone who adds energy, focus, and reliable value to your projects, let’s
-      connect.
+    {{ 'contact.text' | translate }}
     </p>
     <div class="flex">
       <div>
@@ -42,15 +40,11 @@
               #nameCtrl="ngModel"
               required
               minlength="2"
-              [class.invalid]="
-                nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)
-              "
+              [class.invalid]="nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)"
             />
             <div
               class="error"
-              *ngIf="
-                nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)
-              "
+              *ngIf="nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)"
             >
               <span *ngIf="nameCtrl.errors?.['required']">{{
                 'contact.errors.nameRequired' | translate
@@ -92,17 +86,11 @@
             #messageCtrl="ngModel"
             required
             minlength="10"
-            [class.invalid]="
-              messageCtrl.invalid &&
-              (messageCtrl.touched || contactForm.submitted)
-            "
+            [class.invalid]="messageCtrl.invalid && (messageCtrl.touched || contactForm.submitted)"
           ></textarea>
           <div
             class="error"
-            *ngIf="
-              messageCtrl.invalid &&
-              (messageCtrl.touched || contactForm.submitted)
-            "
+            *ngIf="messageCtrl.invalid && (messageCtrl.touched || contactForm.submitted)"
           >
             <span *ngIf="messageCtrl.errors?.['required']">{{
               'contact.errors.messageRequired' | translate
@@ -127,8 +115,7 @@
           />
           <label for="privacy">
             {{ 'contact.privacy.part1' | translate }}
-            &nbsp;<a href="/privacy">{{ 'contact.privacy.part2' | translate }}</a
-            >&nbsp;
+            <a href="/privacy">{{ 'contact.privacy.part2' | translate }}</a>
             {{ 'contact.privacy.part3' | translate }}
           </label>
         </div>
@@ -141,6 +128,25 @@
       </div>
     </form>
   </section>
+   <div class="flex-mobile">
+      <div>
+        <a href="mailto:noah.velic@hotmail.com" class="email">
+          <div class="email-icon">
+            <div class="icon-default"></div>
+            <div class="icon-hover"></div>
+          </div>
+          <p class="info">noah.velic@hotmail.com</p>
+        </a>
+        <a href="tel:+4369910992553" class="tel">
+          <div class="tel-icon">
+            <div class="icon-default"></div>
+            <div class="icon-hover"></div>
+          </div>
+          <p class="info">+43 699 10992553</p>
+        </a>
+      </div>
+      <a href="#hero" class="arrow"></a>
+    </div>
   <div class="toast" [class.show]="toastVisible()">
     {{ 'contact.toast' | translate }}
   </div>

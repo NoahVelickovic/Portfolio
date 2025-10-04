@@ -42,4 +42,41 @@ export class Recommendations implements AfterViewInit {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
   }
+
+    @ViewChild('track', { static: true }) trackRef!: ElementRef<HTMLDivElement>;
+
+  dragging = false;
+  private startX = 0;
+  private startScrollLeft = 0;
+  private pointerId: number | null = null;
+
+  onPointerDown(ev: PointerEvent) {
+    const el = this.trackRef.nativeElement;
+    this.dragging = true;
+    this.pointerId = ev.pointerId;
+    el.setPointerCapture?.(ev.pointerId);
+
+    this.startX = ev.clientX;
+    this.startScrollLeft = el.scrollLeft;
+  }
+
+  onPointerMove(ev: PointerEvent) {
+    if (!this.dragging) return;
+    const el = this.trackRef.nativeElement;
+
+    const dx = ev.clientX - this.startX;
+    el.scrollLeft = this.startScrollLeft - dx; // drag = scroll
+  }
+
+  onPointerUp(ev: PointerEvent) {
+    if (!this.dragging) return;
+    this.dragging = false;
+
+    const el = this.trackRef.nativeElement;
+    if (this.pointerId != null) {
+      el.releasePointerCapture?.(this.pointerId);
+      this.pointerId = null;
+    }
+    // scroll-snap erledigt das Einrasten automatisch
+  }
 }

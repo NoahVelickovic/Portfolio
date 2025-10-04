@@ -46,3 +46,28 @@ a {
 .spacer {
   height: 120px;
 }
+
+@media (max-width: 1000px) {
+  .arrow {
+   margin: 0 auto;
+   margin-top: 100px;
+    &:hover {
+      margin: 0 auto;
+      margin-top: 108px;
+    }
+  }
+
+  .privacy {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
