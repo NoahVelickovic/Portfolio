@@ -25,10 +25,8 @@ export class Header {
   toggleMenu() {
     const burgerBox = document.querySelector("#burger-box")
     const burgerMenu = document.querySelector('#menu');
-    const logo = document.querySelector('#logo');
     const headerRight = document.querySelector('#header-right');
     burgerMenu?.classList.toggle('burger-menu-active');
-    logo?.classList.toggle("none")
     headerRight?.classList.toggle("flex")
     burgerBox?.classList.toggle('active-burger');
   }

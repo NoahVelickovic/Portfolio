@@ -1,5 +1,5 @@
 section {
-  height:600px;
+  height: 600px;
   margin: 0 24px;
 }
 
@@ -25,7 +25,6 @@ section {
   height: 500px;
   margin-right: 36px;
   margin-top: 80px;
-  
 }
 
 .why-me-text {
@@ -46,8 +45,10 @@ section {
 .facts {
   display: flex;
   justify-content: flex-end;
+  .facts-header {
+    width: 290px;
+  }
   h3 {
-    margin-right: 64px;
     margin-top: 0;
     font-size: 42px;
     color: var(--color-orange);
@@ -58,7 +59,7 @@ section {
   display: flex;
   height: 100%;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
 }
 
 .badge {
@@ -153,7 +154,7 @@ section {
   width: 170px;
   text-align: center;
   text-decoration: none;
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
   &:hover {
     cursor: pointer;
     color: var(--color-orange);
@@ -175,7 +176,7 @@ section {
 .marker::after {
   content: '';
   position: absolute;
-  inset: 0; 
+  inset: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -239,12 +240,12 @@ section {
 
 .badge:hover .icon.remote::before {
   opacity: 0;
-   transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
 .badge:hover .icon.remote::after {
   opacity: 1;
-   transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
 .icon.suitcase::before {
@@ -265,4 +266,166 @@ section {
 .badge:hover .icon.suitcase::after {
   opacity: 1;
   transform: translateY(-6px);
+}
+
+.arrow-01 {
+  display: none;
+}
+
+.arrow-6 {
+  display: none;
+}
+
+@media (max-width: 1320px) {
+  .why-me-info {
+    height: 100%;
+  }
+  .facts {
+    flex-direction: column;
+    width: 100%;
+
+    h3 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  .facts-header {
+    width: 100% !important;
+  }
+
+  .flex {
+    width: 450px;
+  }
+
+  .midbox {
+    margin-right: 20px;
+    margin-left: 60px;
+  }
+
+  .location {
+    width: 450px;
+  }
+
+  .info-badges {
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+  }
+
+  .flex-endbox {
+    width: 450px;
+  }
+
+  .arrow-3 {
+    margin-right: 0;
+    margin-left: 100px;
+  }
+
+  .why-me-img {
+    height: 400px;
+    margin-top: 0;
+  }
+
+  .why-me {
+    height: 100%;
+    align-items: center;
+    padding-top: 80px;
+  }
+
+  .lets-talk-btn {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    height: auto;
+  }
+
+  .facts {
+    height: auto;
+  }
+
+  .why-me-text {
+    margin: 0 auto;
+  }
+
+  .why-me-info {
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .why-me-img {
+    display: none;
+  }
+
+  .arrow-01 {
+    display: block !important;
+  }
+
+  .arrow-6 {
+    display: block !important;
+    height: auto;
+    width: auto;
+    margin-left: auto;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .midbox {
+    margin: 0;
+  }
+
+  .flex {
+    width: fit-content;
+  }
+
+  .flex-endbox {
+    margin: 0;
+    width: fit-content;
+  }
+
+  .location {
+    width: fit-content;
+  }
+
+  .text {
+    display: flex;
+    gap: 6px;
+  }
+
+  .info-badges {
+    gap: 24px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .lets-talk-btn {
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  h3 {
+    font-size: 32px !important;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
 }

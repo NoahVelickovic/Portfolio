@@ -101,3 +101,69 @@ p {
   gap: 24px;
   margin-top: auto;
 }
+
+.project-btns-none {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  .project-two-container {
+    height: 315px;
+  }
+  img {
+    width: 500px !important;
+  }
+}
+
+@media (max-width: 1350px) {
+  .project-two-container {
+    max-width: 600px;
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+  }
+
+  .project-btns {
+    display: none;
+  }
+
+  .project-btns-none {
+    display: flex;
+    gap: 24px;
+    margin-top: auto;
+  }
+
+  .project-text {
+    align-items: center;
+    text-align: center !important;
+  }
+
+  p {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  h4 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  img {
+    width: 300px !important;
+  }
+
+  .GitHub-btn, .Live-Test-btn {
+    width: 120px;
+    font-size: 16px;
+  }
+}

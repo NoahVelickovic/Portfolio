@@ -1,6 +1,7 @@
 .flex {
   display: flex;
   gap: 12px;
+  margin: 0 24px;
 }
 
 img {
@@ -13,7 +14,10 @@ img {
   color: var(--color-orange);
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 0;
+  margin: 24px 24px 0 24px !important;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .name-header {
@@ -40,4 +44,60 @@ img {
 .recommendations.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 950px) {
+
+  img {
+    display: none;
+  }
+  
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px;                     
+  scroll-snap-type: x mandatory;      
+  -webkit-overflow-scrolling: touch; 
+  overscroll-behavior-x: contain;   
+  scrollbar-width: none;  
+}
+
+.track::-webkit-scrollbar { display: none; }
+
+.card {
+  flex: 0 0 auto;
+  width: 280px !important;
+  height: 280px;
+  padding: 18px;
+  border: 2px solid #49e0d6;
+  color: var(--color-blue);
+  scroll-snap-align: start;
+  text-align: center;
+
+  .name {
+    justify-content: center;
+    margin: 0 !important;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+}
+}
+
+@media (max-width: 650px) {
+  .name {
+    font-size: 20px;
+  }
+
 }

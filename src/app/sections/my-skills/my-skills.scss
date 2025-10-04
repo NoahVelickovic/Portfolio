@@ -6,6 +6,7 @@ h3 {
   font-size: 42px;
   color: var(--color-orange);
   margin-left: 24px;
+  margin-top: 0;
 }
 
 .skills-container {
@@ -45,4 +46,43 @@ p {
 .skill-box:hover p {
   opacity: 1;
   pointer-events: auto;
+}
+
+@media (max-width: 1000px) {
+
+#skills {
+  height: auto;
+}
+
+.skills-container {
+  height: auto;
+}
+
+ h3 {
+  text-align: center;
+  margin-left: 0;
+ }
+
+ .skill-box {
+  display: flex;
+  justify-content: center;
+ }
+
+ img {
+  height: 90px;
+ }
+
+ p {
+  display: none !important;
+ }
+
+ .flex {
+  width: auto;
+ }
+}
+
+@media (max-width: 450px) {
+h3 {
+  font-size: 32px !important;
+}
 }
