@@ -9,13 +9,30 @@ h3 {
   margin-top: 0;
 }
 
+ .skill-box {
+  display: flex;
+  justify-content: center;
+ }
+
+ .material-design {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  img {
+    height: 100px !important;
+    width: auto;
+  }
+ }
+
+
+
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   align-items: center;
   margin: 24px;
   height: 400px;
-  column-gap: 90px;
+  column-gap: 70px;
   row-gap: 40px;
   opacity: 0;
   transform: translateY(50px);
@@ -30,7 +47,7 @@ h3 {
 .flex {
   display: flex;
   align-items: center;
-  width: 300px;
+  width: 280px;
 }
 
 p {
@@ -68,12 +85,6 @@ p {
   text-align: center;
   margin-left: 0;
  }
-
- .skill-box {
-  display: flex;
-  justify-content: center;
- }
-
  img {
   height: 90px;
  }
