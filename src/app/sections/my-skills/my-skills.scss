@@ -15,7 +15,8 @@ h3 {
   align-items: center;
   margin: 24px;
   height: 400px;
-  gap: 100px;
+  column-gap: 90px;
+  row-gap: 40px;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -34,9 +35,14 @@ h3 {
 
 p {
   margin-left: 12px;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--color-blue);
 }
+
+.material-design img {
+  height: 100px;
+}
+
 .skill-box p {
   opacity: 0;
   pointer-events: none;

@@ -18,8 +18,8 @@
     <span></span>
   </div>
   <div class="header-right" id="header-right">
-    <p [class.active]="current === 'de'" (click)="switchLang('de')" id="lang-de">DE</p>
+    <p [class.active]="current === 'de'" (click)="switchLang('de')"  (click)="toggleMenu()" id="lang-de">DE</p>
     |
-    <p [class.active]="current === 'en'" (click)="switchLang('en')" id="lang-en">EN</p>
+    <p [class.active]="current === 'en'" (click)="switchLang('en')" (click)="toggleMenu()" id="lang-en">EN</p>
   </div>
 </div>
