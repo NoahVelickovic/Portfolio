@@ -1,0 +1,37 @@
+# ------ SPA Fallback (Angular Routing) ------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# ------ Lange Caching-Zeiten für statische Assets ------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Fingerprinted Bundles (main.*.js, styles.*.css, assets mit Hash)
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript         "access plus 1 year"
+  ExpiresByType text/css                "access plus 1 year"
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/svg+xml           "access plus 1 year"
+  ExpiresByType font/woff2              "access plus 1 year"
+</IfModule>
+
+# ------ GZIP/Brotli Kompression (falls verfügbar) ------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+<IfModule mod_brotli.c>
+  BrotliCompressionQuality 5
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# ------ Sicherheit/Kleinigkeiten (optional) ------
+Options -Indexes
+FileETag None
+Header unset ETag
