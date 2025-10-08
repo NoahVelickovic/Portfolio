@@ -60,7 +60,7 @@
               #emailCtrl="ngModel"
               required
               autocomplete="email"
-              pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+              pattern="^(?!.*\.\.)[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$"
               [class.invalid]="emailCtrl.invalid && (emailCtrl.touched || contactForm.submitted)"
             />
 
